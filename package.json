@@ -1,0 +1,15 @@
+{
+  "name": "p3_sabri_marwane",
+  "version": "0.0.0",
+  "description": "webapp to reauest food delivery",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch sass/main.scss:css/style.css"
+  },
+  "author": "Sabri Marwane",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.49.4"
+  }
+}
