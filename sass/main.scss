@@ -1,0 +1,20 @@
+html, body {
+    width: 100%;
+    padding: 0 0;
+    margin: 0 0;
+    font-family: 'Roboto','Shrikhand',sans-serif;
+    @media (min-width: 768px) {
+        width: 768px;
+        margin: 0 auto;
+    }
+}
+
+$Primary: #9356DC;
+$Secondary: #FF79DA;
+$Tertiary: #99E2D0;  
+
+@import "layout/footer.scss";
+@import "layout/footer-charonne.scss";
+@import "layout/footer-cite-rouge.scss";
+@import "layout/footer-folie-mericourt.scss";
+@import "layout/footer-menilmontant.scss";
