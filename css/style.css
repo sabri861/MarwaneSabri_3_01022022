@@ -34,5 +34,24 @@ footer .content-bottom i {
   width: 20px;
   text-align: center;
 }
+footer .content-bottom a:link {
+  color: white;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .icon-back {
+  flex: 1;
+  text-decoration: none;
+  color: black;
+}
+header .titleHeader {
+  margin: auto;
+  font-family: "Shrikhand";
+}
 
 /*# sourceMappingURL=style.css.map */

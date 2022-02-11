@@ -1,0 +1,19 @@
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .icon-back{
+        flex: 1;
+        text-decoration: none;
+        color: black;
+    }
+
+    .titleHeader{
+        margin: auto;
+        font-family: 'Shrikhand';
+
+    }
+}
+
+
