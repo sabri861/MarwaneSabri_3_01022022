@@ -4,9 +4,9 @@ html, body {
   margin: 0 0;
   font-family: "Roboto", "Shrikhand", sans-serif;
 }
-@media (min-width: 768px) {
+@media (min-width: 750px) {
   html, body {
-    width: 768px;
+    width: 750px;
     margin: 0 auto;
   }
 }
@@ -52,6 +52,103 @@ header .icon-back {
 header .titleHeader {
   margin: auto;
   font-family: "Shrikhand";
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 45px;
+  background-color: #EAEAEAEA;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+.search i {
+  margin-right: 10px;
+  padding-bottom: 7px;
+  font-size: 15px;
+  margin-left: 25px;
+}
+.search input {
+  background-color: #EAEAEAEA;
+  margin-left: 5px;
+}
+.search input:focus {
+  outline: none;
+}
+
+.suggestion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #f6f6f6;
+}
+.suggestion h1 {
+  font-size: 30px;
+  font-weight: 700;
+  padding: 0 70px;
+  font-family: "Roboto", sans-serif;
+}
+.suggestion span {
+  padding: 0px 30px;
+  font-size: 20px;
+  font-weight: 100;
+}
+.suggestion .primaryButton {
+  border: 0;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  border-radius: 100px;
+  color: white;
+  background: linear-gradient(#FF79DA, #9356DC);
+  box-shadow: 4px 4px 6px #aaa;
+  margin: 50px;
+  height: 55px;
+}
+.suggestion .primaryButton:hover {
+  background: #dc56cc;
+}
+
+.steps {
+  display: wrap;
+  flex-direction: column;
+}
+.steps h2 {
+  margin-left: 30px;
+}
+.steps .step {
+  margin: 0 20px 20px 40px;
+  background-color: #F6F6F6;
+  padding: 30px 50px 30px 18px;
+  border-radius: 20px;
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  text-align: justify;
+}
+.steps .step:hover {
+  background-color: #f5edff;
+}
+.steps .step:hover:hover .fas {
+  color: #9356DC;
+}
+.steps .fas {
+  margin-right: 30px;
+  padding-left: 20px;
+  color: #7a7a7a;
+}
+.steps .number {
+  width: 18px;
+  height: 18px;
+  padding: 4px 4px;
+  border-radius: 50%;
+  background-color: #9356DC;
+  color: #FFF;
+  position: absolute;
+  top: 30%;
+  left: -4%;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */
