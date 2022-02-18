@@ -9,7 +9,8 @@
     background: linear-gradient($color-Secondary, $color-Primary);
     box-shadow: 4px 4px 6px #aaa;
     margin: 50px;
-    height: 55px; 
+    height: 55px;
+    animation-delay: 4000ms;
   }
 
 @mixin hover($color) {

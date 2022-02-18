@@ -1,3 +1,5 @@
+/*explor*/
+
 .search {
     display: flex;
     justify-content: center;
@@ -5,41 +7,41 @@
     width: 100%;
     height: 45px;
     background-color: $color-Inputcolor;
-    box-shadow:  inset 0 1px 3px rgba(0, 0, 0, 0.25);
-    i{
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.25);
+    i {
         margin-right: 10px;
         padding-bottom: 7px;
         font-size: 15px;
         margin-left: 25px;
     }
-    input{
+    input {
         background-color: $color-Inputcolor;
         margin-left: 5px;
-    &:focus {
-        outline:none;
+        &:focus {
+            outline: none;
+        }
     }
-  }    
 }
 
-.suggestion{   
+.suggestion {
     display: flex;
-	flex-direction: column;
-	align-items: center;
-	text-align:center;
-	background-color: #f6f6f6;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #f6f6f6;
 
-    h1{
+    h1 {
         font-size: 30px;
         font-weight: 700;
         padding: 0 70px;
-        font-family: 'Roboto', sans-serif;
+        font-family: "Roboto", sans-serif;
     }
-    span{
+    span {
         padding: 0px 30px;
         font-size: 20px;
         font-weight: 100;
     }
-    .primaryButton{
+    .primaryButton {
         @include primaryButton;
         &:hover {
             @include hover($color-Primary);
@@ -47,16 +49,17 @@
     }
 }
 
-  .steps{
-     display: wrap;
-     flex-direction: column;
-     
-      h2{
+/*steps*/
+.steps {
+    display: flex;
+    flex-direction: column;
+
+    h2 {
         margin-left: 30px;
-      }
-      .step{
+    }
+    .step {
         margin: 0 20px 20px 40px;
-        background-color: #F6F6F6;
+        background-color: #f6f6f6;
         padding: 30px 50px 30px 18px;
         border-radius: 20px;
         position: relative;
@@ -65,52 +68,87 @@
         &:hover {
             background-color: #f5edff;
             &:hover .fas {
-                color: #9356DC;
-              }
-          }
-      }
-      .fas{
+                color: $color-Primary;
+            }
+        }
+    }
+    .fas {
         margin-right: 30px;
         padding-left: 20px;
         color: #7a7a7a;
     }
-  
+
     .number {
-      width: 18px;
-      height: 18px;
-      padding: 4px 4px;
-      border-radius: 50%;
-      background-color: #9356DC;
-      color: #FFF;
-      position: absolute;
-      top: 30%;
-      left: -4%;
-      text-align: center;
+        width: 18px;
+        height: 18px;
+        padding: 4px 4px;
+        border-radius: 50%;
+        background-color: $color-Primary;
+        color: #fff;
+        position: absolute;
+        top: 30%;
+        left: -4%;
+        text-align: center;
     }
-    
-  }
+}
 
-
-  
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*Results*/
+#results {
+    background-color: #f6f6f6;
+    padding-bottom: 100px;
+    padding-top: 20px;
+    h2 {
+        margin-left: 30px;
+        margin-bottom: 50px;
+    }
+    .card {
+        border-radius: 15px;
+        width: 78%;
+        height: 280px;
+        -webkit-box-shadow: 0 5px 16px #0000002e;
+        box-shadow: 0 5px 16px #0000002e;
+        position: relative;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+        img {
+            width: 100%;
+            height: 190px;
+            border-radius: 14px 14px 0px 0px;
+            -o-object-fit: cover;
+            object-fit: cover;
+        }
+        .cardLabel {
+            position: absolute;
+            top: 13px;
+            right: 8px;
+            background: #99e2d0;
+            padding: 4px 13px;
+            font-size: 14px;
+            color: #369658;
+            font-weight: 700;
+        }
+        .title {
+            margin-left: 20px;
+        }
+        .subtitle {
+            margin-left: 20px;
+            font-weight: 100;
+        }
+        .far {
+            position: absolute;
+            right: 28px;
+            bottom: 30px;
+            font-size: 30px;
+            color: black;
+            &:active {
+                opacity: 1;
+                background: linear-gradient($color-Secondary, $color-Primary);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-weight: 700;
+            }
+        }
+    }
+}
