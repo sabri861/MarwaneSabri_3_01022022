@@ -23,7 +23,7 @@ html, body {
   z-index: 999;
   animation: disappear 1s linear;
   animation-fill-mode: forwards;
-  animation-delay: 2500ms;
+  animation-delay: 1500ms;
 }
 
 @keyframes disappear {
@@ -291,6 +291,25 @@ header .titleHeader {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 700;
+}
+
+.mainImage {
+  width: 78%;
+  height: 280px;
+  -webkit-box-shadow: 0 5px 16px #0000002e;
+  box-shadow: 0 5px 16px #0000002e;
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+.mainImage img {
+  width: 100%;
+  height: 190px;
+  border-radius: 14px 14px 0px 0px;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=style.css.map */
