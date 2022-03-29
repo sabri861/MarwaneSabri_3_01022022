@@ -91,6 +91,7 @@
         border-top-right-radius: 20px;
         border-bottom-right-radius: 20px;
         justify-content: center;
+        transition-duration: 1s;
     }
 
     &:hover .checkIcon {
@@ -107,6 +108,7 @@
         padding-right: 5px;
         justify-content: center;
         opacity: 0;
+        transition-duration: 1s;
     }
     &:hover .fa-solid {
         animation: check 1s forwards;

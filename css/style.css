@@ -527,6 +527,7 @@ header .titleHeader {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   justify-content: center;
+  transition-duration: 1s;
 }
 .subMenuEntry:hover .checkIcon {
   animation: slideIn 1s forwards;
@@ -541,6 +542,7 @@ header .titleHeader {
   padding-right: 5px;
   justify-content: center;
   opacity: 0;
+  transition-duration: 1s;
 }
 .subMenuEntry:hover .fa-solid {
   animation: check 1s forwards;
