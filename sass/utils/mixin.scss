@@ -10,14 +10,29 @@
     box-shadow: 4px 4px 6px #aaa;
     margin: 50px;
     height: 55px;
-    animation-delay: 4000ms;
+    cursor: pointer;
+    position: relative;
+    &:hover {
+        background: darken(#C767D4,5);
+    }
   }
 
-@mixin hover($color) {
-    @if (hue($color) < 180) {
-        $color: adjust-hue($color, 30);
-    } @else {
-        $color: adjust-hue($color, 40);
-    }
-    background: $color;
-}
+@mixin btnResto {
+        border: 0;
+        padding: 0.75rem 1.5rem;
+        font-weight: 500;
+        font-size: 1.1rem;
+        border-radius: 100px;
+        color: white;  
+        background: linear-gradient($color-Secondary, $color-Primary);
+        box-shadow: 4px 4px 6px #aaa;
+        height: 55px;
+        width: 250px;
+        margin-top: 50px;
+        margin-bottom: 100px;
+        cursor: pointer;
+        position: relative;
+        &:hover {
+            background: darken(#C767D4,5);
+        }
+  }

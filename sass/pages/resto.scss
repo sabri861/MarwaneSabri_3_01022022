@@ -5,7 +5,7 @@
     object-fit: cover;
 }
 
-#menu {
+.menu {
     background-color: $color-Inputcolor;
     border-radius: 40px 40px 0 0;
     margin-top: -40px;
@@ -17,6 +17,7 @@
         width: 13%;
         border-top: none;
         border-bottom: 4px solid #94e2d1;
+        position: relative;
     }
 }
 
@@ -28,14 +29,19 @@
     .far {
         font-size: 30px;
         color: black;
+        background: transparent;
         &:hover {
+            animation: fill 0.5s ease-in-out;
+            display: inline-block;
             opacity: 1;
-            background: linear-gradient($color-Secondary, $color-Primary);
+            background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+            background: -webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            font-weight: 700;
+            font-weight: bold;
         }
     }
+
     h1 {
         font-family: "Shrikhand";
         margin-right: 120px;
@@ -43,7 +49,8 @@
 }
 
 .subMenuEntry {
-    margin: 0 20px 20px 40px;
+    padding: 0 auto;
+    margin: 15px 15px 0 15px;
     background-color: #ffff;
     border-radius: 20px;
     font-family: "Roboto", sans-serif;
@@ -54,12 +61,19 @@
         margin-bottom: 20px;
         margin-top: 20px;
         margin-left: 10px;
+        overflow: hidden;
         h3 {
             margin: 0;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
         }
-        span {
+        p {
             margin: 0;
             font-weight: 100;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
         }
     }
     .price {
@@ -67,14 +81,22 @@
         justify-content: flex-end;
         align-items: flex-end;
         margin-bottom: 10px;
+        margin-right: 5px;
     }
     .checkIcon {
-        margin: -1rem -5rem -1rem 1rem;
-        width: 4rem;
+        width: 0;
         display: flex;
         align-items: center;
         background-color: #94e2d1;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        justify-content: center;
     }
+
+    &:hover .checkIcon {
+        animation: slideIn 1s forwards;
+    }
+
     .fa-solid {
         color: #94e2d1;
         background-color: #fff;
@@ -84,72 +106,18 @@
         padding-left: 5px;
         padding-right: 5px;
         justify-content: center;
-        transition-duration: 0.5s;
-        animation: check 3s linear;
-        animation-fill-mode: forwards;
-        animation-delay: 1000ms;
+        opacity: 0;
+    }
+    &:hover .fa-solid {
+        animation: check 1s forwards;
     }
 }
 
-.subMenuMeal {
-    margin: 0 20px 20px 40px;
-    background-color: #ffff;
-    border-radius: 20px;
-    font-family: "Roboto", sans-serif;
+.BtnR {
     display: flex;
-    justify-content: space-around;
-    .info {
-        flex-grow: 1;
-        margin-bottom: 20px;
-        margin-top: 20px;
-        margin-left: 10px;
-        h3 {
-            margin: 0;
-        }
-        span {
-            margin: 0;
-            font-weight: 100;
-        }
-    }
-    .price {
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-end;
-        margin-bottom: 10px;
-    }
+    justify-content: center;
 }
 
-.subMenusweet {
-    margin: 0 20px 20px 40px;
-    background-color: #ffff;
-    border-radius: 20px;
-    font-family: "Roboto", sans-serif;
-    display: flex;
-    justify-content: space-around;
-    .info {
-        flex-grow: 1;
-        margin-bottom: 20px;
-        margin-top: 20px;
-        margin-left: 10px;
-        h3 {
-            margin: 0;
-        }
-        span {
-            margin: 0;
-            font-weight: 100;
-        }
-    }
-    .price {
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-end;
-        margin-bottom: 10px;
-    }
-}
-
-.primaryButton {
-    @include primaryButton;
-    &:hover {
-        @include hover($color-Primary);
-    }
+.btnResto {
+    @include btnResto;
 }

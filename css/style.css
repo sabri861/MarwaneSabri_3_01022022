@@ -23,7 +23,7 @@ html, body {
   z-index: 999;
   animation: disappear 1s linear;
   animation-fill-mode: forwards;
-  animation-delay: 1500ms;
+  animation-delay: 0.7s;
 }
 
 @keyframes disappear {
@@ -91,20 +91,134 @@ html, body {
 }
 @keyframes check {
   0% {
-    transform: rotate(180deg) scale(1);
+    transform: rotate(0deg);
     opacity: 0;
   }
-  1% {
+  100% {
+    transform: rotate(360deg);
     opacity: 1;
   }
-  50% {
-    transform: rotate(360deg) scale(1.15);
-  }
-  99% {
-    opacity: 1;
+}
+@keyframes slideIn {
+  0% {
+    width: 0;
   }
   100% {
-    transform: rotate(720deg) scale(1);
+    width: 4rem;
+  }
+}
+@keyframes fill {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*.animation1{
+  animation: one 0.2s;
+  position: relative;
+}
+
+.animation2{
+  animation: one 0.4s;
+  position: relative;
+}
+
+.animation3{
+  animation: one 0.6s;
+  position: relative;
+}
+
+.animation4{
+  animation: one 0.8s;
+  position: relative;
+}
+
+.animation5{
+  animation: one 1s;
+  position: relative;
+}
+
+.animation6{
+  animation: one 1.2s;
+  position: relative;
+}
+
+.animation7{
+  animation: one 1.4s;
+  position: relative;
+}
+
+.animation8{
+  animation: one 1.6s;
+  position: relative;
+}
+
+.animation9{
+  animation: one 1.8s;
+  position: relative;
+}*/
+.animation1 {
+  animation: one 1s;
+  position: relative;
+}
+
+.animation2 {
+  animation: one 2s;
+  position: relative;
+}
+
+.animation3 {
+  animation: one 3s;
+  position: relative;
+}
+
+.animation4 {
+  animation: one 4s;
+  position: relative;
+}
+
+.animation5 {
+  animation: one 5s;
+  position: relative;
+}
+
+.animation6 {
+  animation: one 6s;
+  position: relative;
+}
+
+.animation7 {
+  animation: one 7s;
+  position: relative;
+}
+
+.animation8 {
+  animation: one 8s;
+  position: relative;
+}
+
+.animation9 {
+  animation: one 9s;
+  position: relative;
+}
+
+.animation10 {
+  animation: one 10s;
+  position: relative;
+}
+
+@keyframes one {
+  from {
+    margin-bottom: 300px;
+    opacity: 0;
+  }
+  to {
+    margin-bottom: 0px;
     opacity: 1;
   }
 }
@@ -113,6 +227,7 @@ footer {
   color: white;
   height: 200px;
   bottom: 0;
+  position: relative;
 }
 footer .titleFooter {
   font-family: "Shrikhand";
@@ -145,9 +260,10 @@ header .icon-back {
   flex: 1;
   text-decoration: none;
   color: black;
+  margin-left: 20px;
 }
 header .titleHeader {
-  margin: auto;
+  margin: 0 auto;
   font-family: "Shrikhand";
 }
 
@@ -204,10 +320,11 @@ header .titleHeader {
   box-shadow: 4px 4px 6px #aaa;
   margin: 50px;
   height: 55px;
-  animation-delay: 4000ms;
+  cursor: pointer;
+  position: relative;
 }
 .suggestion .primaryButton:hover {
-  background: #dc56cc;
+  background: #c053ce;
 }
 
 /*steps*/
@@ -307,11 +424,14 @@ header .titleHeader {
   color: black;
 }
 #results .card .far:hover {
+  animation: fill 0.5s ease-in-out;
+  display: inline-block;
   opacity: 1;
-  background: linear-gradient(#FF79DA, #9356DC);
+  background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  background: -webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-weight: 700;
+  font-weight: bold;
 }
 
 .mainImage img {
@@ -321,19 +441,20 @@ header .titleHeader {
   object-fit: cover;
 }
 
-#menu {
+.menu {
   background-color: #EAEAEA;
   border-radius: 40px 40px 0 0;
   margin-top: -40px;
   overflow: visible;
   position: relative;
 }
-#menu h2 {
+.menu h2 {
   margin-left: 30px;
   font-weight: 100;
   width: 13%;
   border-top: none;
   border-bottom: 4px solid #94e2d1;
+  position: relative;
 }
 
 .headerMenu {
@@ -345,13 +466,17 @@ header .titleHeader {
 .headerMenu .far {
   font-size: 30px;
   color: black;
+  background: transparent;
 }
 .headerMenu .far:hover {
+  animation: fill 0.5s ease-in-out;
+  display: inline-block;
   opacity: 1;
-  background: linear-gradient(#FF79DA, #9356DC);
+  background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  background: -webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-weight: 700;
+  font-weight: bold;
 }
 .headerMenu h1 {
   font-family: "Shrikhand";
@@ -359,7 +484,8 @@ header .titleHeader {
 }
 
 .subMenuEntry {
-  margin: 0 20px 20px 40px;
+  padding: 0 auto;
+  margin: 15px 15px 0 15px;
   background-color: #ffff;
   border-radius: 20px;
   font-family: "Roboto", sans-serif;
@@ -371,26 +497,39 @@ header .titleHeader {
   margin-bottom: 20px;
   margin-top: 20px;
   margin-left: 10px;
+  overflow: hidden;
 }
 .subMenuEntry .info h3 {
   margin: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
-.subMenuEntry .info span {
+.subMenuEntry .info p {
   margin: 0;
   font-weight: 100;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .subMenuEntry .price {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
   margin-bottom: 10px;
+  margin-right: 5px;
 }
 .subMenuEntry .checkIcon {
-  margin: -1rem -5rem -1rem 1rem;
-  width: 4rem;
+  width: 0;
   display: flex;
   align-items: center;
   background-color: #94e2d1;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  justify-content: center;
+}
+.subMenuEntry:hover .checkIcon {
+  animation: slideIn 1s forwards;
 }
 .subMenuEntry .fa-solid {
   color: #94e2d1;
@@ -401,69 +540,18 @@ header .titleHeader {
   padding-left: 5px;
   padding-right: 5px;
   justify-content: center;
-  transition-duration: 0.5s;
-  animation: check 3s linear;
-  animation-fill-mode: forwards;
-  animation-delay: 1000ms;
+  opacity: 0;
+}
+.subMenuEntry:hover .fa-solid {
+  animation: check 1s forwards;
 }
 
-.subMenuMeal {
-  margin: 0 20px 20px 40px;
-  background-color: #ffff;
-  border-radius: 20px;
-  font-family: "Roboto", sans-serif;
+.BtnR {
   display: flex;
-  justify-content: space-around;
-}
-.subMenuMeal .info {
-  flex-grow: 1;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  margin-left: 10px;
-}
-.subMenuMeal .info h3 {
-  margin: 0;
-}
-.subMenuMeal .info span {
-  margin: 0;
-  font-weight: 100;
-}
-.subMenuMeal .price {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  margin-bottom: 10px;
+  justify-content: center;
 }
 
-.subMenusweet {
-  margin: 0 20px 20px 40px;
-  background-color: #ffff;
-  border-radius: 20px;
-  font-family: "Roboto", sans-serif;
-  display: flex;
-  justify-content: space-around;
-}
-.subMenusweet .info {
-  flex-grow: 1;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  margin-left: 10px;
-}
-.subMenusweet .info h3 {
-  margin: 0;
-}
-.subMenusweet .info span {
-  margin: 0;
-  font-weight: 100;
-}
-.subMenusweet .price {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  margin-bottom: 10px;
-}
-
-.primaryButton {
+.btnResto {
   border: 0;
   padding: 0.75rem 1.5rem;
   font-weight: 500;
@@ -472,12 +560,15 @@ header .titleHeader {
   color: white;
   background: linear-gradient(#FF79DA, #9356DC);
   box-shadow: 4px 4px 6px #aaa;
-  margin: 50px;
   height: 55px;
-  animation-delay: 4000ms;
+  width: 250px;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  cursor: pointer;
+  position: relative;
 }
-.primaryButton:hover {
-  background: #dc56cc;
+.btnResto:hover {
+  background: #c053ce;
 }
 
 /*# sourceMappingURL=style.css.map */

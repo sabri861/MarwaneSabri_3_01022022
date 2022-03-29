@@ -43,9 +43,6 @@
     }
     .primaryButton {
         @include primaryButton;
-        &:hover {
-            @include hover($color-Primary);
-        }
     }
 }
 
@@ -145,11 +142,14 @@
             font-size: 30px;
             color: black;
             &:hover {
+                animation: fill 0.5s ease-in-out;
+                display: inline-block;
                 opacity: 1;
-                background: linear-gradient($color-Secondary, $color-Primary);
+                background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+                background: -webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
-                font-weight: 700;
+                font-weight: bold;
             }
         }
     }

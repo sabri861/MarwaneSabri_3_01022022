@@ -8,7 +8,7 @@
     z-index: 999;
     animation: disappear 1s linear;
     animation-fill-mode: forwards;
-    animation-delay: 1500ms;
+    animation-delay: 0.7s;
 }
 
 @keyframes disappear {
@@ -76,22 +76,104 @@
 
   @keyframes check {  
     0%{
-      transform: rotate(180deg) scale(1);
+      transform: rotate(0deg);
       opacity: 0;
     }
-    1%{
-        opacity: 1;
-      }
+  
     
-    50% {
-       transform: rotate(360deg) scale(1.15);
-    }
-   
-    99%{
-        opacity: 1;
-      }
     100%{
-       transform: rotate(720deg) scale(1);
-      opacity: 1;
+       transform: rotate(360deg);
+       opacity: 1;
     } 
   }
+
+  @keyframes slideIn {
+    0%{
+      width: 0;
+    }
+    100%{
+      width: 4rem;
+    }
+  }
+
+  @keyframes fill {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  /*.animation1{
+    animation: one 0.2s;
+    position: relative;
+  }
+
+  .animation2{
+    animation: one 0.4s;
+    position: relative;
+  }
+
+  .animation3{
+    animation: one 0.6s;
+    position: relative;
+  }
+
+  .animation4{
+    animation: one 0.8s;
+    position: relative;
+  }
+
+  .animation5{
+    animation: one 1s;
+    position: relative;
+  }
+
+  .animation6{
+    animation: one 1.2s;
+    position: relative;
+  }
+
+  .animation7{
+    animation: one 1.4s;
+    position: relative;
+  }
+
+  .animation8{
+    animation: one 1.6s;
+    position: relative;
+  }
+
+  .animation9{
+    animation: one 1.8s;
+    position: relative;
+  }*/
+
+  @for $i from 1 through 10 {
+    .animation#{$i} {
+      animation: one #{$i}s;
+      position: relative;
+    }
+}
+
+  @keyframes one{
+    from{
+      margin-bottom: 300px;
+      opacity: 0;
+    }
+    to{
+      margin-bottom: 0px;
+      opacity: 1;
+    }
+  }
+
+  
+
+
+
+
+  
