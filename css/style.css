@@ -365,6 +365,9 @@ header .titleHeader {
   position: relative;
   font-family: "Roboto", sans-serif;
   text-align: justify;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 .steps .step:hover {
   background-color: #f5edff;
@@ -384,10 +387,8 @@ header .titleHeader {
   border-radius: 50%;
   background-color: #9356DC;
   color: #fff;
-  position: absolute;
-  top: 30%;
-  left: -4%;
   text-align: center;
+  margin-left: -30px;
 }
 
 /*Results*/
@@ -443,6 +444,7 @@ header .titleHeader {
   bottom: 30px;
   font-size: 30px;
   color: black;
+  cursor: pointer;
 }
 #results .card .far:hover {
   animation: fill 0.5s ease-in-out;
@@ -512,6 +514,7 @@ header .titleHeader {
   font-family: "Roboto", sans-serif;
   display: flex;
   justify-content: space-around;
+  overflow: hidden;
 }
 .subMenuEntry .info {
   flex-grow: 1;
@@ -549,6 +552,7 @@ header .titleHeader {
   border-bottom-right-radius: 20px;
   justify-content: center;
   animation: slideIn2 1s forwards;
+  cursor: pointer;
 }
 .subMenuEntry:hover .checkIcon {
   animation: slideIn 1s forwards;
@@ -582,8 +586,8 @@ header .titleHeader {
   font-size: 1.1rem;
   border-radius: 100px;
   color: white;
-  background: linear-gradient(#FF79DA, #9356DC);
-  box-shadow: 4px 4px 6px #aaa;
+  background: linear-gradient(#ff79da, #9356dc);
+  box-shadow: 4px 4px 6px rgba(170, 170, 170, 0.5);
   height: 55px;
   width: 250px;
   margin-top: 50px;
@@ -592,7 +596,9 @@ header .titleHeader {
   position: relative;
 }
 .btnResto:hover {
-  background: #c053ce;
+  background: linear-gradient(rgba(255, 121, 218, 0.5), rgba(147, 86, 220, 0.5));
+  box-shadow: 4px 4px 6px #aaaaaa;
+  transition: all 0.3s ease-in-out;
 }
 
 /*# sourceMappingURL=style.css.map */

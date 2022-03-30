@@ -1,12 +1,11 @@
-
 @mixin primaryButton {
     border: 0;
     padding: 0.75rem 1.5rem;
     font-weight: 500;
     font-size: 1.1rem;
     border-radius: 100px;
-    color: white;  
-    background: linear-gradient(rgba($color:$color-Secondary, $alpha: 1.0), rgba($color:$color-Primary, $alpha: 1.0));
+    color: white;
+    background: linear-gradient(rgba($color: $color-Secondary, $alpha: 1), rgba($color: $color-Primary, $alpha: 1));
     box-shadow: 4px 4px 6px rgba($color: #aaa, $alpha: 0.5);
     margin: 50px;
     height: 55px;
@@ -14,30 +13,36 @@
     position: relative;
     transition: all 0.3s ease-in-out;
     &:hover {
-        background: linear-gradient(rgba($color:$color-Secondary, $alpha: 0.5), rgba($color:$color-Primary, $alpha: 0.5));
-        box-shadow: 4px 4px 6px rgba($color: #aaa, $alpha: 1.0);
+        background: linear-gradient(
+            rgba($color: $color-Secondary, $alpha: 0.5),
+            rgba($color: $color-Primary, $alpha: 0.5)
+        );
+        box-shadow: 4px 4px 6px rgba($color: #aaa, $alpha: 1);
         transition: all 0.3s ease-in-out;
-
-
     }
-  }
+}
 
 @mixin btnResto {
-        border: 0;
-        padding: 0.75rem 1.5rem;
-        font-weight: 500;
-        font-size: 1.1rem;
-        border-radius: 100px;
-        color: white;  
-        background: linear-gradient($color-Secondary, $color-Primary);
-        box-shadow: 4px 4px 6px #aaa;
-        height: 55px;
-        width: 250px;
-        margin-top: 50px;
-        margin-bottom: 100px;
-        cursor: pointer;
-        position: relative;
-        &:hover {
-            background: darken(#C767D4,5);
-        }
-  }
+    border: 0;
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    border-radius: 100px;
+    color: white;
+    background: linear-gradient(rgba($color: $color-Secondary, $alpha: 1), rgba($color: $color-Primary, $alpha: 1));
+    box-shadow: 4px 4px 6px rgba($color: #aaa, $alpha: 0.5);
+    height: 55px;
+    width: 250px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    cursor: pointer;
+    position: relative;
+    &:hover {
+        background: linear-gradient(
+            rgba($color: $color-Secondary, $alpha: 0.5),
+            rgba($color: $color-Primary, $alpha: 0.5)
+        );
+        box-shadow: 4px 4px 6px rgba($color: #aaa, $alpha: 1);
+        transition: all 0.3s ease-in-out;
+    }
+}
