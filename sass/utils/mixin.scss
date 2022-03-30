@@ -6,14 +6,19 @@
     font-size: 1.1rem;
     border-radius: 100px;
     color: white;  
-    background: linear-gradient($color-Secondary, $color-Primary);
-    box-shadow: 4px 4px 6px #aaa;
+    background: linear-gradient(rgba($color:$color-Secondary, $alpha: 1.0), rgba($color:$color-Primary, $alpha: 1.0));
+    box-shadow: 4px 4px 6px rgba($color: #aaa, $alpha: 0.5);
     margin: 50px;
     height: 55px;
     cursor: pointer;
     position: relative;
+    transition: all 0.3s ease-in-out;
     &:hover {
-        background: darken(#C767D4,5);
+        background: linear-gradient(rgba($color:$color-Secondary, $alpha: 0.5), rgba($color:$color-Primary, $alpha: 0.5));
+        box-shadow: 4px 4px 6px rgba($color: #aaa, $alpha: 1.0);
+        transition: all 0.3s ease-in-out;
+
+
     }
   }
 

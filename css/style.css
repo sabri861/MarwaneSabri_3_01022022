@@ -107,6 +107,24 @@ html, body {
     width: 4rem;
   }
 }
+@keyframes check2 {
+  0% {
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+}
+@keyframes slideIn2 {
+  0% {
+    width: 4rem;
+  }
+  100% {
+    width: 0;
+  }
+}
 @keyframes fill {
   0% {
     opacity: 0;
@@ -316,15 +334,18 @@ header .titleHeader {
   font-size: 1.1rem;
   border-radius: 100px;
   color: white;
-  background: linear-gradient(#FF79DA, #9356DC);
-  box-shadow: 4px 4px 6px #aaa;
+  background: linear-gradient(#ff79da, #9356dc);
+  box-shadow: 4px 4px 6px rgba(170, 170, 170, 0.5);
   margin: 50px;
   height: 55px;
   cursor: pointer;
   position: relative;
+  transition: all 0.3s ease-in-out;
 }
 .suggestion .primaryButton:hover {
-  background: #c053ce;
+  background: linear-gradient(rgba(255, 121, 218, 0.5), rgba(147, 86, 220, 0.5));
+  box-shadow: 4px 4px 6px #aaaaaa;
+  transition: all 0.3s ease-in-out;
 }
 
 /*steps*/
@@ -527,7 +548,7 @@ header .titleHeader {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   justify-content: center;
-  transition-duration: 1s;
+  animation: slideIn2 1s forwards;
 }
 .subMenuEntry:hover .checkIcon {
   animation: slideIn 1s forwards;
@@ -543,6 +564,7 @@ header .titleHeader {
   justify-content: center;
   opacity: 0;
   transition-duration: 1s;
+  animation: check2 1s forwards;
 }
 .subMenuEntry:hover .fa-solid {
   animation: check 1s forwards;
