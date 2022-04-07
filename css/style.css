@@ -8,6 +8,24 @@ html, body {
     margin: 0 auto;
     font-family: "Roboto", "Shrikhand", sans-serif;
   }
+  html .menu .wrapperMenu, body .menu .wrapperMenu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  html .steps .wrapperSteps, body .steps .wrapperSteps {
+    display: flex;
+    justify-content: center;
+  }
+  html #results .wrapperCard, body #results .wrapperCard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  html #results .card, body #results .card {
+    width: 40%;
+    margin: 20px auto;
+  }
 }
 
 .spinner {

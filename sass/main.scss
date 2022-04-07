@@ -5,6 +5,31 @@ html, body {
     @media (min-width: 750px) {
         margin: 0 auto;
         font-family: 'Roboto','Shrikhand',sans-serif;
+        .menu{
+            .wrapperMenu{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+
+            }
+        }
+        .steps{
+            .wrapperSteps{
+                display: flex;
+                justify-content: center;
+            }
+        }
+        #results{
+            .wrapperCard {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .card{
+                width: 40%;
+                margin: 20px auto;
+            }
+        }
     }
 }
 
